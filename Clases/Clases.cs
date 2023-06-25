@@ -12,8 +12,9 @@ namespace Clases
         public DateTime Fecha;
         public int Precio { get; set; }
         public string Patente { get; set; }
-        public string Vehiculo { get; set; }
+        public string Tipo_de_vehiculo { get; set; }
         public string Marca { get; set; }
+        public int Codigo { get; set; }
 
         public DataTable DT { get; set; } = new DataTable();
 
@@ -24,7 +25,7 @@ namespace Clases
             DT.Columns.Add("Patente", typeof(string));
             DT.Columns.Add("Tipo de vehiculo", typeof(string));
             DT.Columns.Add("Marca", typeof(string));
-
+            DT.Columns.Add("Fecha", typeof(DataSetDateTime));
             LeerDT();
 
             }
@@ -40,7 +41,7 @@ namespace Clases
 
                     DT.Rows[i]["Patente"] = Patente;
                     DT.Rows[i]["Precio"] = Precio;
-                    DT.Rows[i]["Tipo de vehiculo"] = Vehiculo;
+                    DT.Rows[i]["Tipo de vehiculo"] = Tipo_de_vehiculo;
                     DT.Rows[i]["Marca"] = Marca;
 
 
